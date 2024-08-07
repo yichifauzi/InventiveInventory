@@ -46,7 +46,7 @@ public class AdvancedConfigOption<E extends Enum<E>> extends ConfigOption<E> {
     @Override
     public SimpleOption<?> asButton() {
         return new SimpleOption<>(
-                Text.translatable(this.getTranslationKey()).toString(),
+                this.getTranslationKey(),
                 SimpleOption.constantTooltip(this.tooltip),
                 (text, value) -> getValueAsText(value),
                 new SimpleOption.PotentialValuesBasedCallbacks<>(Arrays.asList(enumClass.getEnumConstants()),

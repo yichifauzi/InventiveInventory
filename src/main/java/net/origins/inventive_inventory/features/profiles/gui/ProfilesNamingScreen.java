@@ -49,7 +49,6 @@ public class ProfilesNamingScreen extends Screen {
 
     private void createProfile() {
         String name = this.textFieldWidget.getText();
-        if (name.isEmpty()) return;
         ProfileHandler.create(name, ProfileHandler.getAvailableProfileKey());
         this.close();
     }

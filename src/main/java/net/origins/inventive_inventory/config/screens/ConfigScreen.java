@@ -43,5 +43,11 @@ public class ConfigScreen extends GameOptionsScreen {
         this.body.addSingleOptionEntry(ConfigManager.SORTING.asButton());
         this.body.addOptionEntry(ConfigManager.SORTING_MODE.asButton(), ConfigManager.CURSOR_STACK_BEHAVIOUR.asButton());
 
+        this.body.addSingleOptionEntry(ConfigManager.AUTOMATIC_REFILLING.asButton());
+        this.body.addOptionEntry(ConfigManager.AUTOMATIC_REFILLING_MODE.asButton(), ConfigManager.AUTOMATIC_REFILLING_IGNORE_LOCKED_SLOTS.asButton());
+        this.body.addOptionEntry(ConfigManager.TOOL_REPLACEMENT_BEHAVIOUR.asButton(), ConfigManager.TOOL_REPLACEMENT_PRIORITY.asButton());
+
+        this.body.addSingleOptionEntry(ConfigManager.PROFILES.asButton());
+        this.body.addOptionEntry(ConfigManager.FAST_LOAD.asButton(), ConfigManager.PROFILES_IGNORE_LOCKED_SLOTS.asButton());
     }
 }

@@ -38,7 +38,7 @@ public class SimpleConfigOption extends ConfigOption<Boolean> {
     @Override
     public SimpleOption<?> asButton() {
         return SimpleOption.ofBoolean(
-                Text.of(this.getTranslationKey()).getString(),
+                this.getTranslationKey(),
                 SimpleOption.constantTooltip(this.tooltip),
                 (optionText, value) -> ConfigOption.getValueAsText(value),
                 this.getValue(),

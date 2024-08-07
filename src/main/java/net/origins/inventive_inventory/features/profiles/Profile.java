@@ -12,8 +12,8 @@ public class Profile {
     private final int id;
     private final ItemStack displayStack;
     private final List<SavedSlot> savedSlots;
-    private String name;
-    private String key;
+    private final String name;
+    private final String key;
 
     public Profile(int id, String name, String key, List<SavedSlot> savedSlots) {
         this.id = id;
@@ -39,16 +39,8 @@ public class Profile {
         return this.name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getKey() {
         return this.key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
     }
 
     public List<SavedSlot> getSavedSlots() {

@@ -71,17 +71,6 @@ public class ProfileHandler {
         Notifier.send("Profile overwritten!", Formatting.GOLD);
     }
 
-    public static void update(Profile profile) {
-        if (InventiveInventory.getPlayer().isCreative() || ConfigManager.PROFILES.is(Status.DISABLED)) return;
-        JsonArray profilesJson = getJsonProfiles();
-        Profile newProfile = new Profile(profile.getId(), profile.getName(), profile.getKey(), profile.getSavedSlots());
-        if (profilesJson.isEmpty()) profilesJson.add(newProfile.getAsJsonObject());
-        else profilesJson.set(profile.getId(), newProfile.getAsJsonObject());
-
-        save(profilesJson);
-        Notifier.send("Profile updated!", Formatting.GOLD);
-    }
-
     public static void delete(Profile profile) {
         if (InventiveInventory.getPlayer().isCreative() || ConfigManager.PROFILES.is(Status.DISABLED)) return;
         JsonArray profilesJson = getJsonProfiles();
