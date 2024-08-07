@@ -15,14 +15,26 @@
     "entrypoints": {
         "client": [
             "net.origins.inventive_inventory.InventiveInventory"
+        ],
+        "modmenu": [
+            "net.origins.inventive_inventory.integrations.ModMenuIntegration"
         ]
     },
     "mixins": [
-
+        "keys.mixins.json",
+        "util.mouse.mixins.json",
+        "locked_slots.mixins.json"
     ],
     "depends": {
         "fabricloader": ">=${loader_version}",
         "fabric": "*",
         "minecraft": "${minecraft_version}"
+    },
+    "custom": {
+        "modmenu": {
+            "links": {
+                "modmenu.donate": "https://paypal.me/strobel273"
+            }
+        }
     }
 }
