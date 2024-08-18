@@ -10,6 +10,10 @@ def loader_version = System.getenv('LOADER_VERSION') ?: "0.15.11"
 def fabric_version = System.getenv('FABRIC_VERSION') ?: "0.92.2+1.20.1"
 def modmenu_version = System.getenv('MODMENU_VERSION') ?: "7.1.0"
 
+base {
+    archivesName = "inventive_inventory-" + minecraft_version
+}
+
 repositories {
     // Add repositories to retrieve artifacts from in here.
     maven {
