@@ -54,9 +54,6 @@ Alternatively, you can activate Fast Load where you don't have to press the load
 
 </details>
 
-View and update your created profiles in the Profile Config Screen.  
-You can access it with this command ```/inventive-config ProfilesConfigScreen``` or via [ModMenu](https://modrinth.com/mod/modmenu)
-
 ### Automatic Refilling 🔄📦
 Replenishes your current stack with items from your inventory.  
 Useful for building with many materials or just to always have some food ready.  
