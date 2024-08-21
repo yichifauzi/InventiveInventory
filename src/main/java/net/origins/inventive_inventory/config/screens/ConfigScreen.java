@@ -20,9 +20,9 @@ public class ConfigScreen extends GameOptionsScreen {
 
     @Override
     protected void init() {
-        this.body = new OptionListWidget(this.client, this.width, this.height, 32, this.height - 32, 25);
+        this.body = new OptionListWidget(this.client, this.width, this.height, 32, 25);
         this.addOptions();
-        this.addSelectableChild(this.body);
+        this.addDrawableChild(this.body);
         this.addDrawableChild(
                 ButtonWidget.builder(ScreenTexts.DONE, (button) -> this.close())
                         .position(this.width / 2 - 100, this.height - 27)
@@ -32,9 +32,7 @@ public class ConfigScreen extends GameOptionsScreen {
 
     @Override
     public void render(DrawContext DrawContext, int mouseX, int mouseY, float delta) {
-        this.renderBackgroundTexture(DrawContext);
         super.render(DrawContext, mouseX, mouseY, delta);
-        this.body.render(DrawContext, mouseX, mouseY, delta);
         DrawContext.drawCenteredTextWithShadow(this.textRenderer, this.title, this.width / 2, 5, 0xffffff);
     }
 
